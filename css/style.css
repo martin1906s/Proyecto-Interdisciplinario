@@ -54,7 +54,7 @@
     flex-direction: row;          /* Asegura que las opciones estén en fila */
     margin: 10px;
     padding: 10px;
-    background-color: red;        /* Fondo rojo */
+    background-color: darkgray;        /* Fondo rojo */
     justify-content: space-around; /* Distribuye el espacio de manera uniforme */
     text-decoration: none;
     border-radius: 15px;
@@ -68,7 +68,19 @@
     color: white;
     font-size: 20px;
 }
-
+.elccionNav{
+    display: flex;
+    flex-direction: rows;
+}
+.imgBtnNav2{
+    width: 15px;
+    height: 15px;
+}
+.contImgNav2{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
 
 .leng{
     display: flex;
