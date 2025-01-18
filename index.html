@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Interdisciplinario</title>
     <script src="javaScript/utilitarios.js"></script>
+    <script src="javaScript/mostrarMaterias.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
@@ -52,13 +53,21 @@
             <a href="#introduccion" class="optionNav" id="txt">Introducción</a>
         </div>
         <div class="elccionNav">
-            <a href="#materias" class="optionNav" id="txt">Materias</a>
+            <a href="#materias" class="optionNav" id="txt" onclick="mostrarBarraMaterias()">Materias</a>
         </div>
         <div class="elccionNav">
             <a href="#interactividadFisica" class="optionNav" id="txt">Interactividad Física</a>
         </div>
         <div class="elccionNav">
             <a href="#integrantes" class="optionNav" id="txt">Integrantes</a>
+        </div>
+    </nav>
+    <nav class="nav2" id="nav2" style="display: none;">
+        <div class="materiasNav">
+            <a href="#introduccion" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Sistemas Operativos</a>
+            <a href="#materias" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Química</a>
+            <a href="#interactividadFisica" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Física</a>
+            <a href="#integrantes" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Integrantes</a>
         </div>
     </nav>
     <section id="introduccion" class="secIntroduccion">

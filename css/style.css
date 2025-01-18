@@ -49,7 +49,21 @@
     text-decoration: none;
     border-radius: 15px;
 }
-
+.nav2 {
+    display: flex;
+    flex-direction: row;          /* Asegura que las opciones estén en fila */
+    margin: 10px;
+    padding: 10px;
+    background-color: red;        /* Fondo rojo */
+    justify-content: space-around; /* Distribuye el espacio de manera uniforme */
+    text-decoration: none;
+    border-radius: 15px;
+}
+.materiasNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .optionNav {
     color: white;
     font-size: 20px;
@@ -62,12 +76,14 @@
     justify-content: end;
     padding-right: 10px;
 }
+
 .idioma{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     padding-right: 5px;
 }
+
 a{
     text-decoration: none;
 }

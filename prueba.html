@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .entorno {
+            position: relative;
+            margin: 20px auto;
+            width: 400px;
+            height: 300px;
+            background: url('paisaje.png') no-repeat center / cover;
+        }
+        .persona, .arbol {
+            position: absolute;
+        }
+        .persona {
+            bottom: 50px;
+            left: 50px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .arbol {
+            bottom: 50px;
+            right: 50px;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        .mensaje {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulación Física</h1>
+    <div class="entorno">
+        <img src="persona.png" alt="Persona" class="persona" id="persona" width="80">
+        <img src="arbol.png" alt="Árbol" class="arbol" id="arbol" width="100">
+    </div>
+    <button onclick="cambiarGas('CO2')">Añadir CO₂</button>
+    <button onclick="cambiarGas('O2')">Añadir O₂</button>
+    <button onclick="cambiarGas('CH4')">Añadir CH₄</button>
+    <div class="mensaje" id="mensaje"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>// Variables para los niveles de gases
+    let niveles = {
+        CO2: 0,
+        O2: 0,
+        CH4: 0
+    };
+
+    // Elementos del DOM
+    const persona = document.getElementById('persona');
+    const arbol = document.getElementById('arbol');
+    const mensaje = document.getElementById('mensaje');
+
+    function cambiarGas(gas) {
+        // Incrementar el nivel del gas
+        niveles[gas] += 10;
+
+        // Actualizar los efectos según los niveles
+        actualizarEntorno();
+    }
+
+    function actualizarEntorno() {
+        let texto = '';
+
+        // Efectos por niveles de CO₂
+        if (niveles.CO2 >= 30) {
+            persona.style.transform = 'rotate(-20deg)'; // Persona tosiendo
+            arbol.style.filter = 'brightness(50%)'; // Árbol dañado
+            texto = 'El aumento de CO₂ está dañando el ambiente.';
+        }
+        if (niveles.CO2 >= 60) {
+            persona.style.opacity = '0.5'; // Persona debilitada
+            texto = 'El CO₂ es crítico. La persona no puede soportarlo.';
+        }
+
+        // Efectos por niveles de O₂
+        if (niveles.O2 >= 30) {
+            arbol.style.transform = 'scale(1.2)'; // Árbol crece
+            texto = 'El oxígeno está ayudando al crecimiento del árbol.';
+        }
+        if (niveles.O2 >= 60) {
+            persona.style.transform = 'rotate(10deg)'; // Persona mareada
+            texto = 'Exceso de oxígeno está causando mareos.';
+        }
+
+        // Efectos por niveles de CH₄
+        if (niveles.CH4 >= 30) {
+            texto = 'El metano está contaminando el ambiente.';
+            persona.style.transform = 'translateX(20px)'; // Persona se aleja
+        }
+        if (niveles.CH4 >= 60) {
+            texto = 'El exceso de metano es catastrófico.';
+            arbol.style.filter = 'sepia(100%)'; // Árbol seco
+        }
+
+        // Combinaciones catastróficas
+        if (niveles.CO2 >= 40 && niveles.CH4 >= 40) {
+            texto = 'El planeta está colapsando por CO₂ y CH₄.';
+            arbol.style.transform = 'scale(0.8)'; // Árbol se reduce
+            persona.style.opacity = '0'; // Persona desaparece
+        }
+
+        // Mostrar mensaje
+        mensaje.textContent = texto;
+    }
+</script>
