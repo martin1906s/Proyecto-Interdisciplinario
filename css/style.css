@@ -1,0 +1,108 @@
+.header {
+    display: flex;
+    flex: 1;
+    background-color: darkgray;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.imgCol a :hover {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    transform: scale(1.3);
+    transition: 0.1s;
+}
+
+.imgCol {
+    cursor: pointer;
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info {
+    color: white;
+    text-align: center;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit {
+    color: rgb(255, 255, 255);
+}
+
+.nav {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    justify-content: space-around;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.optionNav {
+    color: white;
+    font-size: 20px;
+}
+
+
+.leng{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 10px;
+}
+.idioma{
+    font-size: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.contIntro{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 20px;
+}
+.txtIntro{
+    display: flex;
+    flex: 7;
+    flex-direction: column;
+    background-color: chartreuse;
+
+}
+.imgGen{
+    width: 80px;
+    height: 80px;
+}
+body{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.imgIntro{
+    display: flex;
+    flex: 1;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.txtIntro2{
+    display: f;
+}
