@@ -63,9 +63,10 @@
     padding-right: 10px;
 }
 .idioma{
-    font-size: 15px;
-    padding-right: 15px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    padding-right: 5px;
 }
 a{
     text-decoration: none;
