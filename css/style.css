@@ -19,7 +19,7 @@
 
 .imgCol {
     cursor: pointer;
-    flex: 1.2;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@ a{
     flex-direction: row;
     width: auto;
     height: auto;
-    background-color: darkgray;
+    background-color: rgba(169, 169, 169, 0.301);
     padding: 10px;
     border-radius: 20px;
 }
@@ -112,7 +112,8 @@ a{
     display: flex;
     flex: 7;
     flex-direction: column;
-    background-color: chartreuse;
+    padding-left: 20px;
+    padding-right: 10px;
 
 }
 .imgGen{
@@ -130,8 +131,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
-.txtIntro2{
-    display: f;
+.imgI{
+    width: 170px;
+    height: 140px;
 }
