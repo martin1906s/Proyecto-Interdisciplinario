@@ -7,6 +7,7 @@
     <title>Proyecto Interdisciplinario</title>
     <script src="javaScript/utilitarios.js"></script>
     <script src="javaScript/mostrarMaterias.js"></script>
+    <script src="javaScript/interactividadFisica.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
@@ -105,8 +106,50 @@
         </div>
     </section>
     <section id="interactividadFisica">
-        <center><h2>Interactividad Fisica</h2></center>
-
+        <h2>INTERACTIVIDAD FÍSICA</h2>
+        <div class="containerIF">
+            <div class="titIF">
+                <h2 class="titleIF">Juega Y Descubre</h2>
+                <h4 class="descIF">
+                    Interactúa con las propiedades químicas y transforma el paisaje. ¿Podrás mantener el
+                    equilibrio o lo destruirás todo?
+                </h4>
+            </div>
+            <div class="interactivityP">
+                <div class="buttonsContIF">
+                    <div class="buttonsIF">
+                        <button class="btnIF" onclick="decrementarCO2()">-10</button>
+                        <p>CO₂</p>
+                        <button class="btnIF" onclick="aumentarCO2()">+10</button>
+                        <p id="co2">50</p>
+                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetCO2();">
+                    </div>
+                    <div class="buttonsIF">
+                        <button class="btnIF" onclick="decrementarCH4()">-10</button>
+                        <p>CH₄</p>
+                        <button class="btnIF" onclick="aumentarCH4()">+10</button>
+                        <p id="ch4">50</p>
+                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetCH4();">
+                    </div>
+                    <div class="buttonsIF">
+                        <button class="btnIF" onclick="decrementarO()">-1</button>
+                        <p>O₂</p class="btnIF">
+                        <button class="btnIF" onclick="aumentarO()">+1</button>
+                        <p id="o">20</p>
+                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetO();">
+                    </div>
+                </div>
+                <div class="screen">
+                    <div class="contImgIF">
+                        <img src="./img/entorno/entorno/Natural.png" class="imgIF" id="imgIF">
+                        <figcaption>Imagenes creadas por Martín Simbaña</figcaption>
+                    </div>
+                    <div class="reslutIF">
+                        <p id="resIF">Normal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 
