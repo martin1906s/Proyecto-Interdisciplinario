@@ -7,18 +7,21 @@ const resetCO2 = () => {
     co2 = 50;
     mostrarTexto("co2", co2);
     cambiarImg();
+    btn(co2,50,"ocultBtnIFCo2");
 }
 
 const resetCH4 = () => {
     ch4 = 50;
     mostrarTexto("ch4", ch4);
     cambiarImg();
+    btn(ch4,50,"ocultBtnIFCh4");
 }
 
 const resetO = () => {
     o2 = 20;
     mostrarTexto("o", o2);
     cambiarImg();
+    btn(o2,20,"ocultBtnIFO");
 }
 
 // Funciones de aumento y decremento
@@ -26,6 +29,7 @@ const aumentarCO2 = () => {
     co2 += 10;
     mostrarTexto("co2", co2);
     cambiarImg();
+    btn(co2,50,"ocultBtnIFCo2");
 }
 
 const decrementarCO2 = () => {
@@ -34,12 +38,14 @@ const decrementarCO2 = () => {
     }
     mostrarTexto("co2", co2);
     cambiarImg();
+    btn(co2,50,"ocultBtnIFCo2");
 }
 
 const aumentarCH4 = () => {
     ch4 += 10;
     mostrarTexto("ch4", ch4);
     cambiarImg();
+    btn(ch4,50,"ocultBtnIFCh4");
 }
 
 const decrementarCH4 = () => {
@@ -48,20 +54,23 @@ const decrementarCH4 = () => {
     }
     mostrarTexto("ch4", ch4);
     cambiarImg();
+    btn(ch4,50,"ocultBtnIFCh4");
 }
 
 const aumentarO = () => {
     o2 += 1;
     mostrarTexto("o", o2);
     cambiarImg();
+    btn(o2,20,"ocultBtnIFO");
 }
 
 const decrementarO = () => {
-    if (o2 > 19) {
+    if (o2 > 20) {
         o2 -= 1;
     }
     mostrarTexto("o", o2);
     cambiarImg();
+    btn(o2,20,"ocultBtnIFO");
 }
 
 const cambiarImg = () => {
@@ -87,5 +96,13 @@ const cambiarImg = () => {
         mostrarImagen("imgIF", "./img/entorno/entorno/Natural.png");
         mostrarTexto("resIF","Natural")
     }
-    
+}
+
+//ocultar/mostrar boton de disminuir
+const btn=(comp,valDefault,btnId)=>{
+    if (comp==valDefault) {
+        ocultarComponente(btnId)
+    }else{
+        mostrarComponente(btnId)
+    }
 }

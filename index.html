@@ -109,7 +109,7 @@
         <h2>INTERACTIVIDAD FÍSICA</h2>
         <div class="containerIF">
             <div class="titIF">
-                <h2 class="titleIF">Juega Y Descubre</h2>
+                <h2 class="titleIF">JUEGA Y DESCUBRE</h2>
                 <h4 class="descIF">
                     Interactúa con las propiedades químicas y transforma el paisaje. ¿Podrás mantener el
                     equilibrio o lo destruirás todo?
@@ -118,34 +118,43 @@
             <div class="interactivityP">
                 <div class="buttonsContIF">
                     <div class="buttonsIF">
-                        <button class="btnIF" onclick="decrementarCO2()">-10</button>
+                        <div id="ocultBtnIFCo2">
+                            <button class="btnIF" onclick="decrementarCO2()">-10</button>
+                        </div>
                         <p>CO₂</p>
                         <button class="btnIF" onclick="aumentarCO2()">+10</button>
                         <p id="co2">50</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetCO2();">
+                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset"
+                            onclick="resetCO2();">
                     </div>
                     <div class="buttonsIF">
-                        <button class="btnIF" onclick="decrementarCH4()">-10</button>
+                        <div id="ocultBtnIFCh4">
+                            <button class="btnIF" onclick="decrementarCH4()">-10</button>
+                        </div>
                         <p>CH₄</p>
                         <button class="btnIF" onclick="aumentarCH4()">+10</button>
                         <p id="ch4">50</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetCH4();">
+                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset"
+                            onclick="resetCH4();">
                     </div>
                     <div class="buttonsIF">
-                        <button class="btnIF" onclick="decrementarO()">-1</button>
+                        <div id="ocultBtnIFO">
+                            <button class="btnIF" onclick="decrementarO()">-1</button>
+                        </div>
                         <p>O₂</p class="btnIF">
                         <button class="btnIF" onclick="aumentarO()">+1</button>
                         <p id="o">20</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio"  class="btnReset" onclick="resetO();">
+                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset" onclick="resetO();">
                     </div>
                 </div>
+                <div class="blancoIF"></div>
                 <div class="screen">
                     <div class="contImgIF">
                         <img src="./img/entorno/entorno/Natural.png" class="imgIF" id="imgIF">
-                        <figcaption>Imagenes creadas por Martín Simbaña</figcaption>
+                        <figcaption style="color: white;">Imagenes creadas por Martín Simbaña</figcaption>
                     </div>
                     <div class="reslutIF">
-                        <p id="resIF">Normal</p>
+                        <p id="resIF" style="color: white;">Normal</p>
                     </div>
                 </div>
             </div>
