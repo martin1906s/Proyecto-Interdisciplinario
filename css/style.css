@@ -81,7 +81,11 @@
     align-items: center;
     padding-left: 5px;
 }
-
+.url{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .leng{
     display: flex;
     flex-direction: row;
