@@ -238,3 +238,87 @@ body{
     position: sticky;
     top: 20px;
 }
+.imgSOCmp{
+    display: flex;
+    flex: 1.2;
+    width: 30px;
+    height: 70px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+.imgSOEje{
+    display: flex;
+    flex: 1.2;
+    width: 30px;
+    height: 70px;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+.txtSO{
+    display: flex;
+    flex: 3;
+    color: white;
+}
+.contenidoSO{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+.contSO{
+    background-color: darkgray;
+    border-radius: 50px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .6;
+    transition: .9s ease;
+    overflow: hidden; /* Oculta el contenido que sobrepasa el tamaño del div */
+    position: relative;
+}
+.contSO:hover{
+    cursor: grabbing;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    background-color: red;
+}
+.contSO .contenidoSO {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.contImgSO{
+    display: flex;
+    width: 850px;
+    height: 420px;
+    overflow: hidden; /* Oculta el contenido que sobrepasa el tamaño del div */
+    position: relative;
+    background-color: darkgray;
+    border-radius: 50px 0px 50px 0px;
+}
+.contTitSo{
+    background-color: white;
+    border-radius: 50px 50px 0px 0px;
+    padding: 5px;
+}
+.SOcont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    text-align: justify;
+}
+.txtIntroSO{
+    padding: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: black;
+}
+.contenedorSitemasOp{
+    background-color: rgba(169, 169, 169, 0.582);
+    padding-bottom: 15px;
+    border-radius: 50px 0px 50px 0px;
+}
