@@ -8,24 +8,20 @@
     border-radius: 20px;
     padding: 15px;
 }
-
-.imgCol a :hover {
+.imgCol a:hover {
     padding: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
     transform: scale(1.3);
     transition: 0.1s;
 }
-
 .imgCol {
     cursor: pointer;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 .info {
     color: white;
     text-align: center;
@@ -35,11 +31,9 @@
     justify-content: center;
     align-items: center;
 }
-
 .tit {
     color: rgb(255, 255, 255);
 }
-
 .nav {
     display: flex;
     margin: 10px;
@@ -51,15 +45,15 @@
 }
 .nav2 {
     display: flex;
-    flex-direction: row;          /* Asegura que las opciones estén en fila */
+    flex-direction: row;
     margin: 10px;
     padding: 10px;
-    background-color: darkgray;        /* Fondo rojo */
-    justify-content: space-around; /* Distribuye el espacio de manera uniforme */
+    background-color: darkgray;
+    justify-content: space-around;
     text-decoration: none;
     border-radius: 15px;
 }
-.materiasNav{
+.materiasNav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -68,42 +62,40 @@
     color: white;
     font-size: 20px;
 }
-.elccionNav{
+.elccionNav {
     display: flex;
     flex-direction: rows;
 }
-.imgBtnNav2{
+.imgBtnNav2 {
     width: 15px;
     height: 15px;
 }
-.contImgNav2{
+.contImgNav2 {
     display: flex;
     align-items: center;
     padding-left: 5px;
 }
-.url{
+.url {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.leng{
+.leng {
     display: flex;
     flex-direction: row;
     justify-content: end;
     padding-right: 10px;
 }
-
-.idioma{
+.idioma {
     width: 40px;
     height: 40px;
     cursor: pointer;
     padding-right: 5px;
 }
-
-a{
+a {
     text-decoration: none;
 }
-.contIntro{
+.contIntro {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -112,24 +104,23 @@ a{
     padding: 10px;
     border-radius: 20px;
 }
-.txtIntro{
+.txtIntro {
     display: flex;
     flex: 7;
     flex-direction: column;
     padding-left: 20px;
     padding-right: 10px;
     font-size: 20px;
-
 }
-.imgGen{
+.imgGen {
     width: 80px;
     height: 80px;
 }
-body{
+body {
     padding-left: 5px;
     padding-right: 5px;
 }
-.imgIntro{
+.imgIntro {
     display: flex;
     flex: 1;
     float: left;
@@ -137,52 +128,140 @@ body{
     justify-content: center;
     align-items: center;
 }
-.imgI{
+.imgI {
     width: 170px;
     height: 140px;
 }
-.containerIF{
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgCol,
+    .info {
+        flex: 1;
+        margin: 10px 0;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav2 {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .imgIntro {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .txtIntro {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .imgI {
+        width: 100%;
+        height: auto;
+    }
+    .leng {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .idioma {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info h2,
+    .info p,
+    .info h1 {
+        font-size: 16px;
+    }
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .nav2 {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .imgIntro {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .txtIntro {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .imgI {
+        width: 100%;
+        height: auto;
+    }
+    .leng {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .idioma {
+        width: 30px;
+        height: 30px;
+        padding-right: 5px;
+    }
+}
+.containerIF {
     display: flex;
     flex-direction: column;
     flex: 1;
     background-color: rgba(169, 169, 169, 0.301);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     border-radius: 50px;
 }
-.titIF{
+.titIF {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.titleIF{
+.titleIF {
     margin-bottom: 0.01px;
 }
-.interactivityP{
+.interactivityP {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.buttonsContIF{
+.buttonsContIF {
     display: flex;
     flex-direction: column;
     flex: 3;
     justify-content: space-around;
     background-color: darkgray;
     border-radius: 50px 0px 0px 50px;
+    width: 100%;
 }
-.buttonsIF{
+.buttonsIF {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 10px;
     border-radius: 50px;
     background-color: white;
+    padding: 10px;
 }
-.btnIF{
+.btnIF {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -192,7 +271,7 @@ body{
     border-width: 3px;
     cursor: pointer;
 }
-.screen{
+.screen {
     display: flex;
     flex-direction: column;
     flex: 5;
@@ -200,125 +279,176 @@ body{
     align-items: center;
     background-color: red;
     border-radius: 0px 50px 50px 0px;
+    width: 100%;
 }
-.blancoIF{
+.blancoIF {
     display: flex;
     flex: 0.1;
 }
-.contImgIF{
+.contImgIF {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 15px;
 }
-.imgIF{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 480px;
-    height: 400px;
+.imgIF {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
     border-radius: 30px;
 }
-.reslutIF{
+.reslutIF {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
 }
-.btnReset{
+.btnReset {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
-#resIF{
+#resIF {
     font-size: 40px;
 }
-.navPrinc{
+@media (max-width: 768px) {
+    .interactivityP {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttonsContIF {
+        width: 100%;
+    }
+    .buttonsIF {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .imgIF {
+        width: 90%;
+    }
+    #resIF {
+        font-size: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .btnIF {
+        width: 30px;
+        height: 30px;
+    }
+    #resIF {
+        font-size: 24px;
+    }
+}
+.navPrinc {
     position: sticky;
     top: 20px;
+    z-index: 1000;
 }
-.imgSOCmp{
-    display: flex;
-    flex: 1.2;
-    width: 30px;
-    height: 70px;
+.contenedorSitemasOp {
+    background-color: rgba(169, 169, 169, 0.582);
+    padding-bottom: 15px;
+    border-radius: 50px 0px 50px 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.imgSOCmp,
+.imgSOEje {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
     border-radius: 20px;
-    margin-right: 15px;
 }
-.imgSOEje{
+.txtIntroSO {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: black;
+    text-align: justify;
+}
+.txtSO {
+    color: black;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.SOcont {
     display: flex;
-    flex: 1.2;
-    width: 30px;
-    height: 70px;
-    border-radius: 20px;
-    margin-left: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
 }
-.txtSO{
-    display: flex;
-    flex: 3;
-    color: white;
-}
-.contenidoSO{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-    border-radius: 30px;
-}
-.contSO{
+.contSO {
     background-color: darkgray;
     border-radius: 50px;
     padding: 15px;
     margin-bottom: 10px;
-    width: 0px;
     flex-grow: 1;
-    object-fit: cover;
-    opacity: .6;
+    opacity: .8;
     transition: .9s ease;
-    overflow: hidden; /* Oculta el contenido que sobrepasa el tamaño del div */
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
     position: relative;
 }
-.contSO:hover{
+.contSO:hover {
     cursor: grabbing;
-    width: 300px;
-    opacity: 1;
     filter: contrast(120%);
     background-color: red;
+    opacity: 1;
 }
-.contSO .contenidoSO {
-    transition: transform 0.3s ease, filter 0.3s ease;
+.contTitSo h3 {
+    font-size: 1.5rem;
+    text-align: center;
 }
-.contImgSO{
+.contImgSO {
     display: flex;
-    width: 850px;
-    height: 420px;
-    overflow: hidden; /* Oculta el contenido que sobrepasa el tamaño del div */
-    position: relative;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
     background-color: darkgray;
     border-radius: 50px 0px 50px 0px;
 }
-.contTitSo{
-    background-color: white;
-    border-radius: 50px 50px 0px 0px;
-    padding: 5px;
+@media (max-width: 768px) {
+    .contenedorSitemasOp {
+        padding: 10px;
+    }
+    .txtIntroSO {
+        font-size: 1rem;
+    }
+    .SOcont {
+        flex-direction: column;
+    }
+    .contSO {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .contImgSO {
+        width: 100%;
+    }
+    .imgSOCmp,
+    .imgSOEje {
+        width: 100%;
+        height: auto;
+    }
+    .contTitSo h3 {
+        font-size: 1.2rem;
+    }
 }
-.SOcont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-p{
-    text-align: justify;
-}
-.txtIntroSO{
-    padding: 20px;
-    padding-top: 10px;
-    font-size: 20px;
-    color: black;
-}
-.contenedorSitemasOp{
-    background-color: rgba(169, 169, 169, 0.582);
-    padding-bottom: 15px;
-    border-radius: 50px 0px 50px 0px;
+@media (max-width: 480px) {
+    .txtIntroSO {
+        font-size: 0.9rem;
+    }
+    .contSO {
+        padding: 10px;
+    }
+    .imgSOCmp,
+    .imgSOEje {
+        max-width: 100%;
+    }
+    .contTitSo h3 {
+        font-size: 1rem;
+    }
+    .contenidoSO {
+        flex-direction: column;
+    }
 }
