@@ -234,3 +234,7 @@ body{
 #resIF{
     font-size: 40px;
 }
+.navPrinc{
+    position: sticky;
+    top: 20px;
+}
