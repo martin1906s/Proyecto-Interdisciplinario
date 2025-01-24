@@ -8,6 +8,7 @@
     <script src="../javaScript/utilitarios.js"></script>
     <script src="../javaScript/mostrarMaterias.js"></script>
     <script src="../javaScript/interactividadFisicaEs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
@@ -81,10 +82,10 @@
             <div class="materiasNav">
                 <a href="#sisOp" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Systèmes
                     d'exploitation</a>
-                <a href="#materias" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Chimie</a>
+                <a href="#mate" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Mathématiques</a>
                 <a href="#interactividadFisica" class="optionNav" id="txt2"
                     onclick="ocultarBarraMaterias()">Physique</a>
-                <a href="#integrantes" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Membres</a>
+                <a href="#soporte" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Assistance technique</a>
             </div>
         </nav>
     </nav>
@@ -315,6 +316,96 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="mate">
+        <h2>Mathématiques</h2>
+        <div class="contMate">
+            <canvas id="myChart"></canvas>
+            <figcaption>datosmacro.expansion.com</figcaption>
+        </div>
+    </section>
+    <script>
+        const ctx = document.getElementById('myChart');
+        let anios = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        const niveles = [45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
+        const GWh = [34.150, 33.056, 32.128, 31.281, 32.452, 29.224, 27.831, 27.155, 25.819];
+        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543]
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: anios,
+                datasets: [
+                    {
+                        label: 'CO₂ Mt',
+                        data: niveles,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Generación de GWh',
+                        data: GWh,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Producción de Petroleo',
+                        data: petroleo,
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <section id="soporte">
+        <h2>Support Technique</h2>
+        <div class="imgSoporte">
+            <div class="cmpST">
+                <p>
+                    Les déchets électroniques, également appelés e-déchets, sont l'ensemble des déchets provenant
+                    appareils
+                    des appareils électroniques qui ne sont plus fonctionnels.
+                    Les déchets électroniques, également appelés déchets électroniques, désignent tous les types de
+                    déchets provenant
+                    appareils
+                    produits électriques et électroniques ayant atteint la fin de leur durée de vie utile.
+                    Ce terme couvre une large gamme de produits, notamment :
+                    (Faites la liste) Appareils de communication : Téléphones portables, smartphones, tablettes.
+                </p>
+            </div>
+            <div class="CharCmpST">
+                <canvas id="ChartSoporteTec"></canvas>
+            </div>
+            <script>
+                const ctxM = document.getElementById('ChartSoporteTec');
+                let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
+                const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
+                new Chart(ctxM, {
+                    type: 'pie',
+                    data: {
+                        labels: pais,
+                        datasets: [
+                            {
+                                label: 'Toneladas Métricas T/m',
+                                data: tonMet,
+                                borderWidth: 1
+                            },
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
     </section>
 </body>

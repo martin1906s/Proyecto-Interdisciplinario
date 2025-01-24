@@ -8,6 +8,7 @@
     <script src="../javaScript/utilitarios.js"></script>
     <script src="../javaScript/mostrarMaterias.js"></script>
     <script src="../javaScript/interactividadFisicaEs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
@@ -81,9 +82,9 @@
         <nav class="nav2" id="nav2" style="display: none;">
             <div class="materiasNav">
                 <a href="#sisOp" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">オペレーティングシステム</a>
-                <a href="#materias" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">化学</a>
+                <a href="#mate" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">数学</a>
                 <a href="#interactividadFisica" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">物理</a>
-                <a href="#integrantes" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">メンバー</a>
+                <a href="#soporte" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">テクニカルサポート</a>
             </div>
         </nav>
     </nav>
@@ -261,6 +262,95 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="mate">
+        <h2>数学</h2>
+        <div class="contMate">
+            <canvas id="myChart"></canvas>
+            <figcaption>datosmacro.expansion.com</figcaption>
+        </div>
+    </section>
+    <script>
+        const ctx = document.getElementById('myChart');
+        let anios = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        const niveles = [45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
+        const GWh = [34.150, 33.056, 32.128, 31.281, 32.452, 29.224, 27.831, 27.155, 25.819];
+        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543]
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: anios,
+                datasets: [
+                    {
+                        label: 'CO₂ Mt',
+                        data: niveles,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Generación de GWh',
+                        data: GWh,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Producción de Petroleo',
+                        data: petroleo,
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <section id="soporte">
+        <h2>Soporte Tecnico</h2>
+        <div class="imgSoporte">
+            <div class="cmpST">
+                <p>
+                    電子廃棄物は、e-wasteとも呼ばれ、
+                    デバイス
+                    機能しなくなった電子機器。
+                    電子廃棄物は、e-wasteとも呼ばれ、あらゆる種類の廃棄物を指します。
+                    デバイス
+                    耐用年数が終了した電気・電子製品。
+                    この用語には、以下を含む幅広い製品が含まれます。
+                    （リストを作成）通信機器：携帯電話、スマートフォン、タブレット。
+                </p>
+            </div>
+            <div class="CharCmpST">
+                <canvas id="ChartSoporteTec"></canvas>
+            </div>
+            <script>
+                const ctxM = document.getElementById('ChartSoporteTec');
+                let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
+                const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
+                new Chart(ctxM, {
+                    type: 'pie',
+                    data: {
+                        labels: pais,
+                        datasets: [
+                            {
+                                label: 'Toneladas Métricas T/m',
+                                data: tonMet,
+                                borderWidth: 1
+                            },
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
     </section>
 

@@ -8,6 +8,7 @@
     <script src="../javaScript/utilitarios.js"></script>
     <script src="../javaScript/mostrarMaterias.js"></script>
     <script src="../javaScript/interactividadFisicaEs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
@@ -81,9 +82,9 @@
         <nav class="nav2" id="nav2" style="display: none;">
             <div class="materiasNav">
                 <a href="#sisOp" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Operating Systems</a>
-                <a href="#materias" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Chemistry</a>
+                <a href="#mate" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Math</a>
                 <a href="#interactividadFisica" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Physics</a>
-                <a href="#integrantes" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Members</a>
+                <a href="#soporte" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Technical Support</a>
             </div>
         </nav>
     </nav>
@@ -290,6 +291,97 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="mate">
+        <h2>Math</h2>
+        <div class="contMate">
+            <canvas id="myChart"></canvas>
+            <figcaption>datosmacro.expansion.com</figcaption>
+        </div>
+    </section>
+    <script>
+        const ctx = document.getElementById('myChart');
+        let anios = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
+        const niveles = [45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
+        const GWh = [34.150, 33.056, 32.128, 31.281, 32.452, 29.224, 27.831, 27.155, 25.819];
+        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543]
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: anios,
+                datasets: [
+                    {
+                        label: 'CO₂ Mt',
+                        data: niveles,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Generate of GWh',
+                        data: GWh,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Production of Petrolium',
+                        data: petroleo,
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <section id="soporte">
+        <h2>Technical Support</h2>
+        <div class="imgSoporte">
+            <div class="cmpST">
+                <p>
+                    Electronic waste, also known as e-waste, is the set of waste from
+
+                    electronic devices that are no longer functional.
+
+                    Electronic waste, also known as e-waste, refers to all types of waste from
+                    electrical and electronic devices that have reached the end of their useful life.
+
+                    This term covers a wide range of products, including:
+
+                    (Make a list) Communication devices: Mobile phones, smartphones, tablets.
+                </p>
+            </div>
+            <div class="CharCmpST">
+                <canvas id="ChartSoporteTec"></canvas>
+            </div>
+            <script>
+                const ctxM = document.getElementById('ChartSoporteTec');
+                let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
+                const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
+                new Chart(ctxM, {
+                    type: 'pie',
+                    data: {
+                        labels: pais,
+                        datasets: [
+                            {
+                                label: 'Toneladas Métricas T/m',
+                                data: tonMet,
+                                borderWidth: 1
+                            },
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
     </section>
 
