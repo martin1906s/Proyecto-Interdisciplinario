@@ -86,7 +86,7 @@
                     Operativos</a>
                 <a href="#mate" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Matemáticas</a>
                 <a href="#interactividadFisica" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Física</a>
-                <a href="#integrantes" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Integrantes</a>
+                <a href="#soporte" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Soporte Técnico</a>
             </div>
         </nav>
     </nav>
@@ -306,16 +306,17 @@
     </section>
     <section id="mate">
         <h2>Matemáticas</h2>
-        <div class="contMate">  
+        <div class="contMate">
             <canvas id="myChart"></canvas>
+            <figcaption>datosmacro.expansion.com</figcaption>
         </div>
     </section>
     <script>
         const ctx = document.getElementById('myChart');
         let anios = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
-        const niveles=[45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
+        const niveles = [45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
         const GWh = [34.150, 33.056, 32.128, 31.281, 32.452, 29.224, 27.831, 27.155, 25.819];
-        const petroleo=[475, 481, 473, 479, 531, 517, 531, 548, 543]
+        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543]
         new Chart(ctx, {
             type: 'bar',
             data: {
@@ -332,9 +333,9 @@
                         borderWidth: 1
                     },
                     {
-                        label:'Producción de Petroleo',
-                        data:petroleo,
-                        borderWidth:1
+                        label: 'Producción de Petroleo',
+                        data: petroleo,
+                        borderWidth: 1
                     }
                 ]
             },
@@ -347,6 +348,51 @@
             }
         });
     </script>
+    <section id="soporte">
+        <h2>Soporte Tecnico</h2>
+        <div class="imgSoporte">
+            <div class="cmpST">
+                <p>
+                    La chatarra electrónica, también conocida como e-waste, es el conjunto de residuos de
+                    dispositivos
+                    electrónicos que ya no son funcionales.
+                    La basura electrónica, también conocida como e-waste, se refiere a todo tipo de residuos de
+                    aparatos
+                    eléctricos y electrónicos que han llegado al final de su vida útil.
+                    Este término abarca una amplia gama de productos, entre los que se incluyen:
+                    (Hacer lista) Dispositivos de comunicación: Teléfonos móviles, smartphones, tabletas.
+                </p>
+            </div>
+            <div class="CharCmpST">
+                <canvas id="ChartSoporteTec"></canvas>
+            </div>
+            <script>
+                const ctxM = document.getElementById('ChartSoporteTec');
+                let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
+                const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
+                new Chart(ctxM, {
+                    type: 'pie',
+                    data: {
+                        labels: pais,
+                        datasets: [
+                            {
+                                label: 'Toneladas Métricas T/m',
+                                data: tonMet,
+                                borderWidth: 1
+                            },
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </section>
 </body>
 
 </html>
