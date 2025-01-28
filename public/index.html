@@ -352,6 +352,9 @@
         <h2>Soporte Tecnico</h2>
         <div class="imgSoporte">
             <div class="cmpST">
+                <center>
+                    <h2>Chatarra Electrónica</h2>
+                </center>
                 <p>
                     La chatarra electrónica, también conocida como e-waste, es el conjunto de residuos de
                     dispositivos
@@ -371,7 +374,7 @@
                 let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
                 const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
                 new Chart(ctxM, {
-                    type: 'pie',
+                    type: 'polarArea',
                     data: {
                         labels: pais,
                         datasets: [
@@ -383,15 +386,67 @@
                         ]
                     },
                     options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
+                        plugins: {
+                            title: {
+                                display: true, // Habilita el título
+                                text: 'Producción de Chatarra Electrónica a Nivel Mundial', // Texto del título
+                                color: '#000' // Color del título
                             }
                         }
                     }
                 });
             </script>
         </div>
+        <div id="empresas" style="margin-top: 30px;">
+            <div class="cmpST">
+                <center>
+                    <h2>Responsabilidad ESG</h2>
+                </center>
+                <p>
+                    La responsabilidad ESG (ambiental, social y de gobernanza) ha ganado una importancia creciente en
+                    los últimos años como una medida clave del comportamiento ético y sostenible de las empresas. ESG
+                    hace referencia a cómo una empresa gestiona su impacto ambiental, su relación con las comunidades y
+                    su estructura de gobernanza corporativa. Cada vez más, los inversores, consumidores y otras partes
+                    interesadas están exigiendo que las empresas no solo busquen rentabilidad económica, sino también
+                    que actúen de manera responsable en estos tres aspectos.
+
+                    La evaluación ESG mide el compromiso de una empresa con principios éticos, su capacidad para mitigar
+                    riesgos ambientales, su responsabilidad social y la transparencia en su administración corporativa.
+                    En este contexto, las empresas que destacan en estas áreas son consideradas líderes en
+                    sostenibilidad y tienen un impacto positivo tanto en la sociedad como en el medio ambiente.
+                </p>
+            </div>
+            <canvas id="empresasNiv"></canvas>
+            <figcaption>
+                Ranking Merco - Responsabilidad y Gobierno Corporativo 2023
+            </figcaption>
+        </div>
+        <script>
+            const id = document.getElementById('empresasNiv');
+            let empresa = ["Tía", "Banco Pichincha", "Cervecería Nacional", "Nestlé", "Consorcio Nobis", "Holcim", "Corporación Favorita", "Paccari", "Pronaca", "Produbanco"];
+            const pnt = [7570, 7948, 8000, 10000, 7826, 8034, 9981, 8093, 9117, 8639];
+            new Chart(id, {
+                type: 'radar',
+                data: {
+                    labels: empresa,
+                    datasets: [
+                        {
+                            label: 'pnts',
+                            data: pnt,
+                        },
+                    ]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Empresas Ecuatorianas con Mayor Responsabilidad ESG - 2023',
+                            color: '#000'
+                        }
+                    }
+                }
+            });
+        </script>
     </section>
 </body>
 

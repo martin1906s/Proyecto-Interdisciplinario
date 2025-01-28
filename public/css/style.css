@@ -475,6 +475,7 @@ body {
 }
 .cmpST{
     display: flex;
+    flex-direction: column;
     flex: 1;
     background-color: rgba(169, 169, 169, 0.459);
     padding: 10px;
@@ -487,9 +488,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
 }
-.cmpST:hover{
-    transform: scale(1.1);
-    transition: .9s ease;
-    background-color: red;
-    color: white;
+.chatTxt{
+    display: flex;
+    flex-direction: column;
 }
