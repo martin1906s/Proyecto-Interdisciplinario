@@ -492,3 +492,122 @@ body {
     display: flex;
     flex-direction: column;
 }
+#integrantes {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Encabezado del chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+}
+
+.logo-chat {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-title h3 {
+    margin: 0;
+}
+
+.chat-title p {
+    margin: 0;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Caja de mensajes */
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #e5ddd5;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mensajes */
+.message {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.received {
+    flex-direction: row;
+}
+
+.sent {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.bubble {
+    max-width: 70%;
+    background-color: #dcf8c6;
+    padding: 10px;
+    border-radius: 7.5px;
+    position: relative;
+}
+
+.received .bubble {
+    background-color: white;
+    align-self: flex-start;
+    border-radius: 7.5px 7.5px 7.5px 0;
+}
+
+.sent .bubble {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    border-radius: 7.5px 7.5px 0 7.5px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #075e54;
+}
+
+/* Área de escritura */
+.input-area {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.input-area button {
+    background-color: #25d366;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}

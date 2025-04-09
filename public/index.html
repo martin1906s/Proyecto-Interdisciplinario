@@ -8,93 +8,68 @@
     <script src="javaScript/utilitarios.js"></script>
     <script src="javaScript/mostrarMaterias.js"></script>
     <script src="javaScript/interactividadFisicaEs.js"></script>
+    <script src="javaScript/escribirUsuario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logoColegio.png" type="image/x-icon">
     <meta name="google" content="notranslate">
-
 </head>
 
 <body>
     <div class="url">
-        <div>
+        <div class="github-link">
             <a href="https://github.com/martin1906s/Proyecto-Interdisciplinario" target="_blank">
-                <img src="img/botones/gitHub.png" alt="boton de gitHub" width="40px" height="40px" onclick=>
+                <img src="img/botones/gitHub.png" alt="Botón de GitHub" width="40" height="40">
             </a>
-        </div>
-        <div class="leng">
-            <a href="index.html">
-                <img src="./img/banderas/Ecuador.png" alt="Bandera de Ecuador" class="idioma">
-            </a>
-            <a class="idioma" href="./en/index.html">
-                <img src="./img/banderas/EEUU.png" alt="Bandera Estados Unidos" class="idioma">
-            </a>
-            <a class="idioma" href="./fra/index.html">
-                <img src="./img/banderas/Francia.png" alt="Bandera Francia" class="idioma">
-            </a>
-            <a class="idioma" href="./chi/index.html">
-                <img src="./img/banderas/China.png" alt="Bandera China" class="idioma">
-            </a>
-            <a class="idioma" href="./jap/index.html">
-                <img src="./img/banderas/Japon.png" alt="Bandera de Japon" class="idioma">
-            </a>
-
         </div>
     </div>
-    <header>
-        <div class="header">
-            <div class="imgCol">
-                <a href="https://www.facebook.com/UEFLosShyris/?locale=es_LA" target="_blank">
-                    <img src="./img/logoColegio.png" alt="logo del colegio" width="120" />
-                </a>
-            </div>
-            <div class="info">
-                <h2>UNIDAD EDUCATIVA "LOS SHYRIS"</h2>
-                <i>
-                    <p>- Proyecto Interdisciplinario -</p>
-                </i>
-                <h1 class="tit">UN PLANETA MÁS LIMPIO ES POSIBLE</h1>
-            </div>
+
+    <header class="header">
+        <div class="imgCol">
+            <a href="https://www.facebook.com/UEFLosShyris/?locale=es_LA" target="_blank">
+                <img src="./img/logoColegio.png" alt="Logo del colegio" width="120">
+            </a>
+        </div>
+        <div class="info">
+            <h2>UNIDAD EDUCATIVA "LOS SHYRIS"</h2>
+            <i>
+                <p>- Proyecto Interdisciplinario -</p>
+            </i>
+            <h1 class="tit">UN PLANETA MÁS LIMPIO ES POSIBLE</h1>
         </div>
     </header>
+
     <nav class="navPrinc">
         <nav class="nav">
+            <div class="elccionNav"><a href="#introduccion" class="optionNav">Introducción</a></div>
             <div class="elccionNav">
-                <a href="#introduccion" class="optionNav" id="txt">Introducción</a>
-            </div>
-            <div class="elccionNav">
-                <div class="materiasNav">
-                    <a href="#" class="optionNav" id="txt" onclick="toggleBarraMaterias()">Materias</a>
-                </div>
+                <a href="#" class="optionNav" onclick="toggleBarraMaterias()">Materias</a>
                 <div class="contImgNav2">
                     <img src="./img/botones/noOpciones.png" id="btnNavMat" class="imgBtnNav2"
                         onclick="mostrarBarraMaterias()">
-                    <img src="./img/botones/siOpciones.png" id="btnNavMat2" style="display: none;" class="imgBtnNav2"
+                    <img src="./img/botones/siOpciones.png" id="btnNavMat2" class="imgBtnNav2" style="display: none;"
                         onclick="ocultarBarraMaterias()">
                 </div>
             </div>
-            <div class="elccionNav">
-                <a href="#interactividadFisica" class="optionNav" id="txt">Interactividad Física</a>
-            </div>
-            <div class="elccionNav">
-                <a href="#integrantes" class="optionNav" id="txt">Integrantes</a>
-            </div>
+            <div class="elccionNav"><a href="#interactividadFisica" class="optionNav">Interactividad Física</a></div>
+            <div class="elccionNav"><a href="#integrantes" class="optionNav">Integrantes</a></div>
         </nav>
         <nav class="nav2" id="nav2" style="display: none;">
             <div class="materiasNav">
-                <a href="#sisOp" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Sistemas
-                    Operativos</a>
-                <a href="#mate" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Matemáticas</a>
-                <a href="#interactividadFisica" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Física</a>
-                <a href="#soporte" class="optionNav" id="txt2" onclick="ocultarBarraMaterias()">Soporte Técnico</a>
+                <a href="#sisOp" class="optionNav" onclick="ocultarBarraMaterias()">Sistemas Operativos</a>
+                <a href="#mate" class="optionNav" onclick="ocultarBarraMaterias()">Matemáticas</a>
+                <a href="#interactividadFisica" class="optionNav" onclick="ocultarBarraMaterias()">Física</a>
+                <a href="#soporte" class="optionNav" onclick="ocultarBarraMaterias()">Soporte Técnico</a>
             </div>
         </nav>
     </nav>
+
     <section id="introduccion" class="secIntroduccion">
-        <h2>INTRODUCCIÒN</h2>
+        <h2>INTRODUCCIÓN</h2>
         <div class="contIntro">
             <div class="imgIntro">
-                <img src="img/allsDocuments/introduccion.jpg" class="imgI" alt="imagen de introduccion">
+                <img src="img/allsDocuments/introduccion.jpg" class="imgI" alt="Imagen de introducción">
                 <figcaption>emagen.com.mx</figcaption>
             </div>
             <div class="txtIntro">
@@ -106,7 +81,7 @@
                     significativo en el medio ambiente y en los seres vivos. Estos contaminantes no solo agravan
                     desafíos globales como el cambio climático y el deterioro de la capa de ozono, sino que también
                     afectan la salud pública, provocando enfermedades respiratorias, cardiovasculares y alergias.
-
+                    <br><br>
                     A nivel ambiental, los contaminantes comprometen la vitalidad de los ecosistemas, dañan la
                     vegetación, contaminan los cuerpos de agua y amenazan la biodiversidad. Ante esta problemática, se
                     hace indispensable impulsar estrategias efectivas para mitigar su emisión y promover prácticas
@@ -116,53 +91,46 @@
             </div>
         </div>
     </section>
+
     <section id="interactividadFisica">
         <h2>INTERACTIVIDAD FÍSICA</h2>
         <div class="containerIF">
             <div class="titIF">
                 <h2 class="titleIF">JUEGA Y DESCUBRE</h2>
-                <h4 class="descIF">
-                    Interactúa con las propiedades químicas y transforma el paisaje. ¿Podrás mantener el
-                    equilibrio o lo destruirás todo?
-                </h4>
+                <h4 class="descIF">Interactúa con las propiedades químicas y transforma el paisaje. ¿Podrás mantener el
+                    equilibrio o lo destruirás todo?</h4>
             </div>
             <div class="interactivityP">
                 <div class="buttonsContIF">
                     <div class="buttonsIF">
-                        <div id="ocultBtnIFCo2">
-                            <button class="btnIF" onclick="decrementarCO2()">-10</button>
-                        </div>
+                        <div id="ocultBtnIFCo2"><button class="btnIF" onclick="decrementarCO2()">-10</button></div>
                         <p>CO₂</p>
                         <button class="btnIF" onclick="aumentarCO2()">+10</button>
                         <p id="co2">50</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset"
+                        <img src="./img/botones/reset.png" alt="Botón de reinicio" class="btnReset"
                             onclick="resetCO2();">
                     </div>
                     <div class="buttonsIF">
-                        <div id="ocultBtnIFCh4">
-                            <button class="btnIF" onclick="decrementarCH4()">-10</button>
-                        </div>
+                        <div id="ocultBtnIFCh4"><button class="btnIF" onclick="decrementarCH4()">-10</button></div>
                         <p>CH₄</p>
                         <button class="btnIF" onclick="aumentarCH4()">+10</button>
                         <p id="ch4">50</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset"
+                        <img src="./img/botones/reset.png" alt="Botón de reinicio" class="btnReset"
                             onclick="resetCH4();">
                     </div>
                     <div class="buttonsIF">
-                        <div id="ocultBtnIFO">
-                            <button class="btnIF" onclick="decrementarO()">-1</button>
-                        </div>
-                        <p>O₂</p class="btnIF">
+                        <div id="ocultBtnIFO"><button class="btnIF" onclick="decrementarO()">-1</button></div>
+                        <p>O₂</p>
                         <button class="btnIF" onclick="aumentarO()">+1</button>
                         <p id="o">20</p>
-                        <img src="./img/botones/reset.png" alt="boton de reinicio" class="btnReset" onclick="resetO();">
+                        <img src="./img/botones/reset.png" alt="Botón de reinicio" class="btnReset" onclick="resetO();">
                     </div>
                 </div>
                 <div class="blancoIF"></div>
                 <div class="screen">
                     <div class="contImgIF">
                         <img src="./img/entorno/entorno/Natural.png" class="imgIF" id="imgIF">
-                        <figcaption style="color: white;">Imagenes creadas por Martín Simbaña</figcaption>
+                        <figcaption style="color: white;">Imágenes creadas por Martín Simbaña</figcaption>
                     </div>
                     <div class="reslutIF">
                         <p id="resIF" style="color: white;">Normal</p>
@@ -171,16 +139,16 @@
             </div>
         </div>
     </section>
+
     <section id="sisOp">
-        <h2>Sistemas Operativos</h2>
+        <h2>SISTEMAS OPERATIVOS</h2>
         <div class="contenedorSitemasOp">
             <p class="txtIntroSO">
                 En la era digital, los sistemas operativos y las redes son fundamentales para el funcionamiento de las
-                tecnologías modernas. Sin embargo, los materiales utilizados en la fabricación de estos componentes,
-                tienen
-                un impacto significativo en el medio ambiente. Estos materiales,
-                que históricamente se emplearon en la producción de equipos electrónicos y componentes de redes, pueden
-                causar daños graves tanto en el entorno como en la salud humana cuando no se gestionan adecuadamente.
+                tecnologías modernas. Sin embargo, los materiales utilizados en la fabricación de estos componentes
+                tienen un impacto significativo en el medio ambiente. Estos materiales, que históricamente se emplearon
+                en la producción de equipos electrónicos y componentes de redes, pueden causar daños graves tanto en el
+                entorno como en la salud humana cuando no se gestionan adecuadamente.
             </p>
             <div class="SOcont">
                 <center>
@@ -189,53 +157,42 @@
                 <div class="contImgSO">
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Amianto</h3>
-                            </center>
+                            <h3 class="titSO">Amianto</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Amianto.png" alt="Amianto" class="imgSOCmp">
-                            <p class="txtSO">
-                                Puede estar presente en materiales de aislamiento antiguos.
-                                Fue ampliamente usado por su resistencia al calor y a la corrosión.
-                                La exposición prolongada al amianto puede causar enfermedades graves como la asbestosis.
-                                Su uso está prohibido en muchos países, pero persiste en edificaciones antiguas.
-                            </p>
+                            <p class="txtSO">Puede estar presente en materiales de aislamiento antiguos. Fue ampliamente
+                                usado por su resistencia al calor y a la corrosión. La exposición prolongada al amianto
+                                puede causar enfermedades graves como la asbestosis. Su uso está prohibido en muchos
+                                países, pero persiste en edificaciones antiguas.</p>
                             <img src="./img/SistemasOperativos/Amianto_Cable.png" alt="Ejemplo Componente Amianto"
                                 class="imgSOEje">
                         </div>
                     </div>
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Cadmio</h3>
-                            </center>
+                            <h3 class="titSO">Cadmio</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Cadmio.png" alt="Cadmio" class="imgSOCmp">
-                            <p class="txtSO">
-                                Usado en baterías recargables y algunos tipos de conectores.
-                                También se emplea como recubrimiento anticorrosivo en ciertos componentes.
-                                Es un metal pesado que puede ser peligroso para la salud humana y el medio ambiente.
-                                La tecnología moderna busca alternativas menos dañinas.
-                            </p>
+                            <p class="txtSO">Usado en baterías recargables y algunos tipos de conectores. También se
+                                emplea como recubrimiento anticorrosivo en ciertos componentes. Es un metal pesado que
+                                puede ser peligroso para la salud humana y el medio ambiente. La tecnología moderna
+                                busca alternativas menos dañinas.</p>
                             <img src="./img/SistemasOperativos/Cadmio_Bateria.png" alt="Ejemplo Componente Cadmio"
                                 class="imgSOEje">
                         </div>
                     </div>
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Mercurio</h3>
-                            </center>
+                            <h3 class="titSO">Mercurio</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Mercurio.png" alt="Mercurio" class="imgSOCmp">
-                            <p class="txtSO">
-                                Puede estar presente en algunos componentes electrónicos, como interruptores y relés.
-                                También se utilizaba en lámparas fluorescentes y dispositivos de medición antiguos.
-                                Es altamente tóxico y representa un riesgo ambiental si no se desecha correctamente.
-                                Muchos países han restringido su uso mediante acuerdos internacionales.
+                            <p class="txtSO">Puede estar presente en algunos componentes electrónicos, como
+                                interruptores y relés. También se utilizaba en lámparas fluorescentes y dispositivos de
+                                medición antiguos. Es altamente tóxico y representa un riesgo ambiental si no se desecha
+                                correctamente. Muchos países han restringido su uso mediante acuerdos internacionales.
                             </p>
                             <img src="./img/SistemasOperativos/Mercurio_Interruptor.png"
                                 alt="Ejemplo Componente Mercurio" class="imgSOEje">
@@ -243,59 +200,43 @@
                     </div>
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Plomo</h3>
-                            </center>
+                            <h3 class="titSO">Plomo</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Plomo.png" alt="Plomo" class="imgSOCmp">
-                            <p class="txtSO">
-                                Se encuentra en soldaduras y conectores de cableado.
-                                Su uso se debe a su bajo punto de fusión y buena conductividad.
-                                Sin embargo, puede ser tóxico si se manipula incorrectamente.
-                                Las regulaciones actuales buscan reducir su empleo en productos electrónicos.
-                            </p>
+                            <p class="txtSO">Se encuentra en soldaduras y conectores de cableado. Su uso se debe a su
+                                bajo punto de fusión y buena conductividad. Sin embargo, puede ser tóxico si se manipula
+                                incorrectamente. Las regulaciones actuales buscan reducir su empleo en productos
+                                electrónicos.</p>
                             <img src="./img/SistemasOperativos/Plomo_Soldadura.png" alt="Ejemplo Componente Plomo"
                                 class="imgSOEje">
                         </div>
                     </div>
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Bifenilos Policlorados</h3>
-                            </center>
+                            <h3 class="titSO">Bifenilos Policlorados</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Bifenilos_Policlorados.png" alt="Bifenilos Policlorados"
                                 class="imgSOCmp">
-                            <p class="txtSO">
-                                Se encuentran en aislantes y algunos tipos de condensadores. Estos compuestos son
-                                altamente
-                                tóxicos y persistentes en el medio ambiente. Se han relacionado con problemas de salud
-                                como
-                                cáncer y trastornos hormonales, y su uso está prohibido o estrictamente regulado en
-                                muchos
-                                países.
-                            </p>
+                            <p class="txtSO">Se encuentran en aislantes y algunos tipos de condensadores. Estos
+                                compuestos son altamente tóxicos y persistentes en el medio ambiente. Se han relacionado
+                                con problemas de salud como cáncer y trastornos hormonales, y su uso está prohibido o
+                                estrictamente regulado en muchos países.</p>
                             <img src="./img/SistemasOperativos/Bifenilos_Policlorados_Ej.png"
                                 alt="Ejemplo Bifenilos Policlorados" class="imgSOEje">
                         </div>
                     </div>
                     <div class="contSO">
                         <div class="contTitSo">
-                            <center>
-                                <h3 class="titSO">Compuesto de Bromuro</h3>
-                            </center>
+                            <h3 class="titSO">Compuesto de Bromuro</h3>
                         </div>
                         <div class="contenidoSO">
                             <img src="./img/SistemasOperativos/Bromuro.png" alt="Bromuro" class="imgSOCmp">
-                            <p class="txtSO">
-                                Empleados como retardantes de llama en plásticos y carcasas. Ayudan a prevenir la
-                                propagación del fuego en equipos electrónicos y textiles. Sin embargo, pueden liberar
-                                sustancias tóxicas durante la combustión, y su eliminación incorrecta puede generar
-                                riesgos
-                                para la salud y el medio ambiente.
-                            </p>
+                            <p class="txtSO">Empleados como retardantes de llama en plásticos y carcasas. Ayudan a
+                                prevenir la propagación del fuego en equipos electrónicos y textiles. Sin embargo,
+                                pueden liberar sustancias tóxicas durante la combustión, y su eliminación incorrecta
+                                puede generar riesgos para la salud y el medio ambiente.</p>
                             <img src="./img/SistemasOperativos/Bromuro_Aislante.png" alt="Ejemplo Componente Bromuro"
                                 class="imgSOEje">
                         </div>
@@ -304,8 +245,9 @@
             </div>
         </div>
     </section>
+
     <section id="mate">
-        <h2>Matemáticas</h2>
+        <h2>MATEMÁTICAS</h2>
         <div class="contMate">
             <canvas id="myChart"></canvas>
             <figcaption>datosmacro.expansion.com</figcaption>
@@ -316,54 +258,41 @@
         let anios = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
         const niveles = [45.32, 42.6, 39.89, 35.71, 40.82, 41.37, 39.76, 40.97, 42.26];
         const GWh = [34.150, 33.056, 32.128, 31.281, 32.452, 29.224, 27.831, 27.155, 25.819];
-        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543]
+        const petroleo = [475, 481, 473, 479, 531, 517, 531, 548, 543];
         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: anios,
                 datasets: [
-                    {
-                        label: 'CO₂ Mt',
-                        data: niveles,
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Generación de GWh',
-                        data: GWh,
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Producción de Petroleo',
-                        data: petroleo,
-                        borderWidth: 1
-                    }
+                    { label: 'CO₂ Mt', data: niveles, backgroundColor: 'rgba(255, 99, 132, 0.6)', borderWidth: 1},
+                    { label: 'Generación de GWh', data: GWh, backgroundColor: 'rgba(54, 162, 235, 0.6)', borderWidth: 1 },
+                    { label: 'Producción de Petróleo', data: petroleo, backgroundColor: 'rgba(75, 192, 192, 0.6)', borderWidth: 1 }
                 ]
             },
             options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+                scales: { y: { beginAtZero: true } },
+                plugins: { legend: { position: 'top' } }
             }
         });
     </script>
+
     <section id="soporte">
-        <h2>Soporte Tecnico</h2>
+        <h2>SOPORTE TÉCNICO</h2>
         <div class="imgSoporte">
             <div class="cmpST">
                 <center>
                     <h2>Chatarra Electrónica</h2>
                 </center>
                 <p>
-                    La chatarra electrónica, también conocida como e-waste, es el conjunto de residuos de
-                    dispositivos
-                    electrónicos que ya no son funcionales.
-                    La basura electrónica, también conocida como e-waste, se refiere a todo tipo de residuos de
-                    aparatos
-                    eléctricos y electrónicos que han llegado al final de su vida útil.
-                    Este término abarca una amplia gama de productos, entre los que se incluyen:
-                    (Hacer lista) Dispositivos de comunicación: Teléfonos móviles, smartphones, tabletas.
+                    La chatarra electrónica, también conocida como e-waste, es el conjunto de residuos de dispositivos
+                    electrónicos que ya no son funcionales. Este término abarca una amplia gama de productos, entre los
+                    que se incluyen:
+                <ul>
+                    <li>Dispositivos de comunicación: Teléfonos móviles, smartphones, tabletas.</li>
+                    <li>Electrodomésticos: Televisores, refrigeradores, microondas.</li>
+                    <li>Equipos informáticos: Computadoras, impresoras, servidores.</li>
+                </ul>
+                Su manejo inadecuado genera contaminación significativa por la presencia de materiales tóxicos.
                 </p>
             </div>
             <div class="CharCmpST">
@@ -371,28 +300,33 @@
             </div>
             <script>
                 const ctxM = document.getElementById('ChartSoporteTec');
-                let pais = ["China", "Estados Unidos", "India", "Japón", "Brasil", "Rusia", "Indonesia", "Alemania", "Reino Unido", "Francia"];
-                const tonMet = [10.13, 6.92, 3.23, 2.57, 2.14, 1.63, 1.62, 1.61, 1.6, 1.36];
+                const empresas = [
+                    "Samsung Electronics",
+                    "Amazon",
+                    "Apple",
+                    "Intel",
+                    "Huawei",
+                    "Xiaomi",
+                    "Microsoft",
+                    "Meta"];
+                const porcentajes = [
+                    21.5,  // Samsung
+                    17.4,  // Amazon
+                    15.2,  // Apple
+                    14.0,  // Intel
+                    10.5,  // Huawei
+                    9.0,   // Xiaomi
+                    6.2,   // Microsoft
+                    6.2    // Meta
+                ]; 
                 new Chart(ctxM, {
-                    type: 'polarArea',
+                    type: 'bar',
                     data: {
-                        labels: pais,
-                        datasets: [
-                            {
-                                label: 'Toneladas Métricas T/m',
-                                data: tonMet,
-                                borderWidth: 1
-                            },
-                        ]
+                        labels: empresas,
+                        datasets: [{ label: 'Porcentaje %', data: porcentajes, backgroundColor: 'rgba(255, 99, 132, 0.6)', borderWidth: 1 }]
                     },
                     options: {
-                        plugins: {
-                            title: {
-                                display: true, // Habilita el título
-                                text: 'Producción de Chatarra Electrónica a Nivel Mundial', // Texto del título
-                                color: '#000' // Color del título
-                            }
-                        }
+                        plugins: { title: { display: true, text: 'Producción de Chatarra Electrónica a Nivel Mundial', color: '#000' } }
                     }
                 });
             </script>
@@ -403,50 +337,94 @@
                     <h2>Responsabilidad ESG</h2>
                 </center>
                 <p>
-                    La responsabilidad ESG (ambiental, social y de gobernanza) ha ganado una importancia creciente en
-                    los últimos años como una medida clave del comportamiento ético y sostenible de las empresas. ESG
-                    hace referencia a cómo una empresa gestiona su impacto ambiental, su relación con las comunidades y
-                    su estructura de gobernanza corporativa. Cada vez más, los inversores, consumidores y otras partes
-                    interesadas están exigiendo que las empresas no solo busquen rentabilidad económica, sino también
-                    que actúen de manera responsable en estos tres aspectos.
-
-                    La evaluación ESG mide el compromiso de una empresa con principios éticos, su capacidad para mitigar
-                    riesgos ambientales, su responsabilidad social y la transparencia en su administración corporativa.
-                    En este contexto, las empresas que destacan en estas áreas son consideradas líderes en
-                    sostenibilidad y tienen un impacto positivo tanto en la sociedad como en el medio ambiente.
+                    La responsabilidad ESG (ambiental, social y de gobernanza) ha ganado importancia como medida del
+                    comportamiento ético y sostenible de las empresas. Evalúa el impacto ambiental, la relación con las
+                    comunidades y la transparencia en la gobernanza corporativa. Las empresas líderes en ESG son clave
+                    para un futuro sostenible.
                 </p>
             </div>
             <canvas id="empresasNiv"></canvas>
-            <figcaption>
-                Ranking Merco - Responsabilidad y Gobierno Corporativo 2023
-            </figcaption>
+            <figcaption>Ranking Merco - Responsabilidad y Gobierno Corporativo 2023</figcaption>
         </div>
         <script>
             const id = document.getElementById('empresasNiv');
             let empresa = ["Tía", "Banco Pichincha", "Cervecería Nacional", "Nestlé", "Consorcio Nobis", "Holcim", "Corporación Favorita", "Paccari", "Pronaca", "Produbanco"];
             const pnt = [7570, 7948, 8000, 10000, 7826, 8034, 9981, 8093, 9117, 8639];
             new Chart(id, {
-                type: 'radar',
+                type: 'bar',
                 data: {
                     labels: empresa,
-                    datasets: [
-                        {
-                            label: 'pnts',
-                            data: pnt,
-                        },
-                    ]
+                    datasets: [{ label: 'Puntos', data: pnt, backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1 }]
                 },
                 options: {
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Empresas Ecuatorianas con Mayor Responsabilidad ESG - 2023',
-                            color: '#000'
-                        }
-                    }
+                    plugins: { title: { display: true, text: 'Empresas Ecuatorianas con Mayor Responsabilidad ESG - 2023', color: '#000' } }
                 }
             });
         </script>
+    </section>
+    <br>
+    <!-- Sección Integrantes sin cambios -->
+    <section id="integrantes">
+        <div class="chat-header">
+            <img src="./img/logoColegio.png" alt="Logo" class="logo-chat">
+            <div class="chat-title">
+                <h3>Grupo</h3>
+                <p>- Dinos tu punto de vista -</p>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="message received">
+                <img src="./img/colaborators/Damessis.png" alt="" class="avatar">
+                <div class="bubble">
+                    <span class="name">Pasaco D.</span>
+                    <p>Vivimos en una era donde la tecnología avanza a pasos agigantados, transformando nuestra forma de
+                        vivir, comunicarnos y producir. Sin embargo, este progreso ha traído consigo un alto costo
+                        ambiental. La contaminación del aire, del agua y del suelo nos recuerda que el desarrollo sin
+                        conciencia puede ser destructivo. Pero no todo está perdido. La misma tecnología que ha
+                        contribuido al problema puede ser nuestra mayor aliada para solucionarlo. Innovaciones como las
+                        energías limpias, los sistemas inteligentes de reciclaje y la agricultura sostenible nos
+                        muestran que es posible crecer sin dañar al planeta.</p>
+                </div>
+            </div>
+            <div class="message received">
+                <img src="./img/colaborators/Users.png" alt="" class="avatar">
+                <div class="bubble">
+                    <span class="name">Espin S.</span>
+                    <p>La contaminación por computadoras, celulares y otros aparatos electrónicos está creciendo cada
+                        vez más, porque muchos tienen materiales tóxicos que pueden dañar el suelo y el agua si los
+                        botamos donde no se debe. Por eso, es importante no tirarlos a la basura así nomás. Mejor si los
+                        reparamos, donamos o los llevamos a un lugar donde los reciclen. Así ayudamos al planeta y
+                        evitamos más contaminación.</p>
+                </div>
+            </div>
+            <div class="message received">
+                <img src="./img/colaborators/Derek.png" alt="" class="avatar">
+                <div class="bubble">
+                    <span class="name">Nava D.</span>
+                    <p>La chatarra tecnológica, como computadoras y celulares, daña gravemente al medio ambiente por los
+                        metales pesados y químicos tóxicos que libera al descomponerse en vertederos. Su acumulación
+                        contamina suelos, agua y aire, afectando ecosistemas y salud humana. Sugiero promover el
+                        reciclaje obligatorio, diseñar dispositivos más duraderos y educar sobre la disposición
+                        responsable. Las empresas deberían adoptar políticas ESG para minimizar este impacto.</p>
+                </div>
+            </div>
+            <div class="message received">
+                <img src="./img/colaborators/Martin.png" alt="" class="avatar">
+                <div class="bubble">
+                    <span class="name">Simbaña M.</span>
+                    <p>La chatarra y los dispositivos tecnológicos desechados representan una gran amenaza para el medio
+                        ambiente, especialmente por los metales pesados y químicos que contienen. Muchos de estos
+                        residuos terminan en vertederos sin un tratamiento adecuado, contaminando suelos y aguas. Es
+                        crucial fomentar el reciclaje y la reutilización responsable de estos aparatos. Como sugerencia,
+                        deberíamos apoyar leyes que obliguen a los fabricantes a crear productos más sostenibles y
+                        fáciles de reciclar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="mensajeUsuario" placeholder="Escribe tu punto de vista aquí...">
+            <button onclick="enviarMensaje()">Enviar</button>
+        </div>
     </section>
 </body>
 
